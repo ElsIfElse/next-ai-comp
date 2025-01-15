@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Input elements */
+select{
+  @apply py-2 px-4 rounded-lg bg-transparent border border-slate-300 bg-white 
+}
+option{
+  @apply bg-slate-50 hover:bg-slate-200 rounded-2xl
+}
+input,textarea{
+  @apply rounded-lg border border-slate-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 hover:bg-slate-100 focus:border-red-600
+}
+input,select{
+  @apply focus:bg-slate-200 hover:bg-slate-100
+}
+
+/* Elements */ 
+button{
+  @apply font-light p-1 md:py-2 md:px-4 border bg-[#00E5E0] border-slate-300 hover:bg-opacity-80 rounded-lg w-[100px] text-sm 
+  md:text-base
+}
+h1{
+  @apply tracking-tight
+} 
+h2{
+  @apply text-sm font-semibold tracking-wide
+}
+h3{
+   @apply font-thin italic
+}
+label{
+  @apply ml-1 text-sm font-semibold tracking-tighter
+}
+p{
+  @apply text-xs md:text-base
+}
+
+/* Classes */
+.link{
+  @apply font-light py-1 px-2 border border-slate-300 bg-[#00E5E0] hover:bg-opacity-80 rounded-lg text-sm flex justify-center items-center
+  md:text-base md:py-2 md:px-4
+}
+

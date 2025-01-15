@@ -1,0 +1,36 @@
+import { MessageObject } from "../utils/useMessageHistory";
+
+const messageArray:MessageObject[] = [
+    { message: "Welcome to our support chat!", sender: "bot" },
+    { message: "Thank you!", sender: "user" },
+    { message: "How can I assist you today?", sender: "bot" },
+    { message: "I have an issue with my recent order.", sender: "user" },
+    { message: "Could you please provide the order number?", sender: "bot" },
+    { message: "Yes, it's #12345.", sender: "user" },
+    { message: "Thank you! Let me check the details for you.", sender: "bot" },
+    { message: "Sure, take your time.", sender: "user" },
+    { message: "It seems there was a delay in shipment. I apologize for the inconvenience.", sender: "bot" },
+    { message: "Is there an estimated delivery date?", sender: "user" },
+    { message: "Yes, it should arrive by this Friday.", sender: "bot" },
+    { message: "Great, thank you for the update!", sender: "user" },
+    { message: "You're welcome! Is there anything else I can help you with?", sender: "bot" },
+    { message: "No, that's all. Thanks again!", sender: "user" },
+    { message: "Have a great day!", sender: "bot" },
+    { message: "Hi, I need help with my account login.", sender: "user" },
+    { message: "Sure, can you tell me the issue you're facing?", sender: "bot" },
+    { message: "I forgot my password and can't log in.", sender: "user" },
+    { message: "No problem. Would you like me to send a password reset link to your registered email?", sender: "bot" },
+    { message: "Yes, please do that.", sender: "user" },
+    { message: "I’ve sent a password reset link to your email. Please check your inbox.", sender: "bot" },
+    { message: "Got it. Thank you!", sender: "user" },
+    { message: "You're welcome! Let me know if you need further assistance.", sender: "bot" },
+    { message: "Hey, I was charged twice for my subscription.", sender: "user" },
+    { message: "I’m sorry to hear that. Let me verify your account details.", sender: "bot" },
+    { message: "Alright, here’s my email: user@example.com", sender: "user" },
+    { message: "Thank you. It appears there was a duplicate charge. I’ll process a refund immediately.", sender: "bot" },
+    { message: "Thank you so much!", sender: "user" },
+    { message: "You're welcome! The refund should reflect in your account within 3-5 business days.", sender: "bot" },
+    { message: "Got it. Appreciate your help!", sender: "user" },
+  ];
+
+  export default messageArray
