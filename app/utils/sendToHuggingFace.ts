@@ -1,12 +1,9 @@
 import { HfInference } from "@huggingface/inference"
-import dotenv from "dotenv"
-
-dotenv.config()
 
 export let isLoading:boolean = false
 const sendingToHuggingFace = async function(message:string) {
     isLoading = true
-    const token:string | undefined = process.env.HUGGIN_FACE_API_KEY
+    const token:string | undefined = process.env.NEXT_PUBLIC_HUGGIN_FACE_API_KEY
     const hf = new HfInference(token)
 try {
     let out = ""

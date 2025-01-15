@@ -92,7 +92,7 @@ const MessageInputBox = () => {
 
             // Adding new chat history to local storage
             localStorage.setItem('chatHistory',JSON.stringify(promptMessageHistory))
-            console.log(messageToHF)
+            // console.log(messageToHF)
         }
         else{
             console.log("Error: sendingToHuggingFace returned undefined")
