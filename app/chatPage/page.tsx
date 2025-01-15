@@ -32,8 +32,8 @@ const ChatPage = () => {
     const lastMessageRef:RefObject<HTMLDivElement | null>  = useRef(null)
 
     useEffect(()=>{
-        if(lastMessageRef.current !== null){
-            lastMessageRef.current.scrollIntoView({behavior:"smooth"})
+        if(lastMessageRef.current){
+            lastMessageRef.current.scrollTop = lastMessageRef.current.scrollHeight
         }
         
     },[messageHistory])
@@ -46,9 +46,8 @@ const ChatPage = () => {
                     <h1 className="text-2xl font-light">{botName}</h1>
                 </div>
                 <div className=" w-full p-2 md:p-6 h-full gap-6 flex flex-col  bg-white justify-start">
-                    <div className="h-[80%] md:h-[700px] overflow-auto">
+                    <div ref={lastMessageRef} className="h-[80%] md:h-[700px] overflow-auto">
                         <MessageList messages={messageHistory} />
-                        <div className="h-[0px] w-[0px]"ref={lastMessageRef}/>
                     </div>  
                     
                     <div className="h-[100px] flex flex-col justify-end items-start">

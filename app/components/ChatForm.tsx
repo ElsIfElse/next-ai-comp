@@ -7,10 +7,16 @@ import useBotData from "../utils/useBotStore";
 import man1 from "../images/man1.jpg"
 import man2 from "../images/man2.jpg"
 import man3 from "../images/man3.jpg" 
+import man4 from "../images/man4.jpg"
+import man5 from "../images/man5.jpg"
+import man6 from "../images/man6.jpg" 
 
 import woman1 from "../images/woman1.jpg"
 import woman2 from "../images/woman2.jpg"
 import woman3 from "../images/woman3.jpg"
+import woman4 from "../images/woman4.jpg"
+import woman5 from "../images/woman5.jpg"
+import woman6 from "../images/woman6.jpg"
 
 interface ChatDataTypes{
     userName: string,
@@ -53,7 +59,7 @@ const ChatForm = () => {
 
     const imageChoice = function():void{
         if(botGender === 'Female'){
-            const randomNumber = Math.floor(Math.random() * 3)
+            const randomNumber = Math.floor(Math.random() * 6)
             console.log(randomNumber)
             switch(randomNumber){
                 case 0:
@@ -64,9 +70,18 @@ const ChatForm = () => {
                     return 
                 case 2:
                     setBotImage(woman3)
+                    return 
+                case 3:
+                    setBotImage(woman4)
+                    return 
+                case 4:
+                    setBotImage(woman5)
+                    return 
+                case 5:
+                    setBotImage(woman6)
             }
         }else if(botGender === 'Male'){
-            const randomNumber = Math.floor(Math.random() * 3)
+            const randomNumber = Math.floor(Math.random() * 6)
             console.log(randomNumber)
 
             switch(randomNumber){
@@ -78,6 +93,16 @@ const ChatForm = () => {
                     return 
                 case 2:
                     setBotImage(man3)
+                    return 
+                case 3:
+                    setBotImage(man4)
+                    return 
+                case 4:
+                    setBotImage(man5)
+                    return 
+                case 5:
+                    setBotImage(man6)
+                     
             }
         }
     }
@@ -136,6 +161,10 @@ const ChatForm = () => {
                            <option value="Flirty">Flirty</option>
                            <option value="Friendly">Friendly</option>
                            <option value="Mean">Mean</option>
+                           <option value="Inspirational">Inspirational</option>
+                           <option value="Philosophical">Philosophical</option>
+                           <option value="Geeky">Geeky</option>
+                           <option value="Sassy">Sassy</option>
                            <option value="Neutral">Neutral</option>
                         </select>
                     </div>
@@ -148,6 +177,9 @@ const ChatForm = () => {
                                <option value="Possible love interest">Possible love interest</option>
                                <option value="Best Friends">Best Friends</option>
                                <option value="Strangers">Strangers</option>
+                               <option value="Therapist - Patient:">Therapist - Patient:</option>
+                               <option value="Doctor - Patient">Doctor - Patient</option>
+                               <option value="Boss - Employee">Boss - Employee</option>
                                <option value="Teacher - Student">Teacher - Student</option>
                             </select>
                         </div>
@@ -156,6 +188,9 @@ const ChatForm = () => {
                                 <option className="text-slate-300" value="" disabled>Select location</option>
                                <option value="Cafe">Cafe</option>
                                <option value="Texting from home">Texting from home</option>
+                               <option value="Night Club">Night Club</option>
+                               <option value="Hospital">Hospital</option>
+                               <option value="Farm">Farm</option>
                                <option value="Park">Park</option>
                                <option value="Train Station">Train Station</option>
                             </select>

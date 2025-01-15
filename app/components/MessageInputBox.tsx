@@ -71,12 +71,15 @@ const MessageInputBox = () => {
     - Respond in a way that shows you remember previous conversations
     - Reference shared experiences and knowledge when appropriate
     - The conversation takes place in the following setting: ${chatLocation}
-    - Do not start your response with "AI:" or "User:" or ${userName}: or ${botName}:
+    - Do not start your response with this: ${botName}:
     
     The chat history shows your previous interactions as "AI:" and the user's messages as "User". Remember this.
     
     Remember these settings permanently and begin responding naturally as ${botName}. Message history: \n
     `  + '\n' + promptMessageHistory + '\n' +'User: '+ userMessagePayload.message
+
+        console.log(messageToHF)
+
         const res:string | undefined = await sendingToHuggingFace(messageToHF)
 
         // Checking if response is valid or not

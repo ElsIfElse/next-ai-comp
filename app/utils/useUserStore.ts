@@ -10,7 +10,7 @@ export interface UserDataStore{
 
 const useUserData = create<UserDataStore>((set) => ({
   userName:'John Doe',
-  userGender:'Not given', 
+  userGender:'Male', 
 
   setUserGender:(gender:string) => set({userGender:gender}),
   setUserName:(name:string) => set({userName:name})
